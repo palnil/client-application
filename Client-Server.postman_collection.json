@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "9f807ec2-7fd7-4b89-ae2c-523a7ffc1b67",
+		"name": "Client-Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FrontEND",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"empId\": 1,\n    \"firstName\" : \"John\",\n    \"lastName\" : \"Smith\",\n    \"department\" : {\n\n        \"deptId\": 100,\n        \"deptName\" : \"Finance\"\n\n\n    }\n\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/v1/client/api/employee/report",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"v1",
+						"client",
+						"api",
+						"employee",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BackEND",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"empId\": 1,\n    \"firstName\" : \"John\",\n    \"lastName\" : \"Smith\",\n    \"Department\" : {\n\n        \"deptId\": 100,\n        \"deptName\" : \"Finance\"\n\n\n    }\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/v1/server/api/employee/data",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"v1",
+						"server",
+						"api",
+						"employee",
+						"data"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
